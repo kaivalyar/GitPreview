@@ -1,22 +1,26 @@
-// When the extension is installed or upgraded ...
-//chrome.runtime.onInstalled.addListener(function() {
-  // Replace all rules ...
-  //chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    // With a new rule ...
-    chrome.declarativeContent.onPageChanged.addRules([
-      {
-        // That fires when a page's URL contains a 'g' ...
+var rule = {
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { hostPrefix: 'github.com' },
+            pageUrl: { hostPrefix: 'github.com', pathSuffix: '.htm' }
+          }),
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { hostPrefix: 'github.com', pathSuffix: '.html' }
+          }),
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { hostEquals: 'kaivalyar.github.io', pathPrefix: '/htmlpreview'}
+          }),
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { hostEquals: 'kaivalyar.github.io', pathPrefix: 'htmlpreview'}
           })
         ],
-        // And shows the extension's page action.
         actions: [ new chrome.declarativeContent.ShowPageAction() ]
-      }
-    ]);
-  //});
-//});
+      };
+
+chrome.runtime.onInstalled.addListener(function(details) {
+        chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
+          chrome.declarativeContent.onPageChanged.addRules([rule]);
+        });
+});
 
 
 // React when a browser action's icon is clicked.
@@ -35,14 +39,18 @@ chrome.pageAction.onClicked.addListener(function(tab) {
      tabUrl = activeTab.url;
 
   });
+  
   chrome.tabs.getCurrent(function (tab) {
     //Your code below...
     //var tabUrl = encodeURIComponent(tab.url);
     //var tabTitle = encodeURIComponent(tab.title);
     
-    
-    
-    var myNewUrl = "https://kaivalyar.github.io/htmlpreview/?" + tabUrl;
+    var myNewUrl = "kaivalyar.github.io/htmlpreview"
+    if (tabUrl.indexOf('kaivalyar.github.io/htmlpreview/?') !== -1) { // ie if url contains 'kaivalyar.github.io/htmlpreview/?'
+        var myNewUrl = tabUrl.substring(tabUrl.indexOf('?')+1)
+    } else {
+        var myNewUrl = "http://kaivalyar.github.io/htmlpreview/?" + tabUrl;
+    }
   
     //Update the url here.
     chrome.tabs.update({url: myNewUrl});
