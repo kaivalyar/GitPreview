@@ -3,16 +3,18 @@ A chrome extension to provide single click toggle between viewing HTML source on
 
 ## Synopsis
 
-As of May 2017, GitHub has near 60,000 HTML repositories. While the default GitHub inteface is great for viewing HTML code, it is hard to see how it finally looks when rendered by the browser. Most developers working on software projects open local copies of HTML files in their browsers to see how they look. While this works for developers actively developing a particular web project, it is not desirable for the many other users who use GitHub. If you browse through software projects online, and wish to see how a particular page looks, **GitPreview** is for you. If you wish to contribute a minor edit on an HTML page, you no longer need to download the repo to your computer, but can now use this extension to shift your entire workflow online to the GitHub interface.
+As of May 2017, GitHub has near 60,000 HTML repositories. While the default GitHub interface is great for viewing HTML code, it is hard to see how it finally looks when rendered by the browser. Most developers working on software projects open local copies of HTML files in their browsers to see how they look. While this works for developers actively developing a particular web project, it is not desirable for the many others who use GitHub. If you browse through software projects online, and wish to see how a particular page looks, **GitPreview** is for you. If you wish to contribute a minor edit on an HTML page, you no longer need to download the repo to your computer, but can now use this extension to shift your entire workflow online to the GitHub web interface.
 
 ## Setup
 
 #### To Install:
 
+(I am working on getting this extension up onto the webstore. Until then, use the steps below.)
+
 1. Clone or download this repository.
-2. Open chrome (or chromium) and navigate to the extensions page (`Menu` > `More Tools` > `Extensions`).
-3. Enable developer mode (checkbox in the top-right corner).
-4. Click `Load unpacked extension...`.
+2. Open chrome (or chromium) and navigate to the extensions page: `Menu` > `More Tools` > `Extensions`.
+3. Enable developer mode from the checkbox in the top-right corner.
+4. Click the `Load unpacked extension...` button.
 5. Select GitPreview in the file selection dialog that opens (might be named GitPreview-master on your machine after extracting from zip).
 
 #### To Run:
@@ -27,6 +29,8 @@ As of May 2017, GitHub has near 60,000 HTML repositories. While the default GitH
 If you have any questions, suggestions, or feedback, please feel free to write to [kaivalyaraw@gmail.com](mailto:kaivalyaraw@gmail.com). I look forward to hearing from you.
 
 ## License
+
+This extension is based upon a [local fork](https://github.com/kaivalyar/htmlpreview) of the excellent [htmlpreview](http://htmlpreview.github.io/) project by [Jerzy Głowacki](http://niute.ch/).
 
 **This project is released under and protected by the MIT License**
 
