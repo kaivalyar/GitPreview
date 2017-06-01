@@ -1,0 +1,27 @@
+{
+  "name": "GitPreview",
+  "author": "Kaivalya Rawal",
+  "version": "0.1",
+  "description": "Quickly toggle between GitHub's default HTML view and the browser's rendered HTML view.",
+  "homepage_url": "https://github.com/kaivalyar/GitPreview",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action" :
+  {
+    "default_icon" : "icon.png",
+    "default_title" : "Preview GitHub HTML files."
+  },
+  "permissions" : [
+    "declarativeContent",
+    "activeTab"
+  ],
+  "icons" : {
+    "24" : "icon-24.png",
+    "32" : "icon-32.png",
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "manifest_version": 2
+}
