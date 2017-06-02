@@ -30,9 +30,7 @@ If you have any questions, suggestions, or feedback, please feel free to write t
 
 ## License
 
-This extension is based upon a [local fork](https://github.com/kaivalyar/htmlpreview) of the excellent [htmlpreview](http://htmlpreview.github.io/) project by [Jerzy Głowacki](http://niute.ch/).
-
-**This project is released under and protected by the MIT License**
+This extension uses a [local fork](https://github.com/kaivalyar/htmlpreview) of the excellent [htmlpreview](http://htmlpreview.github.io/) project by [Jerzy Głowacki](http://niute.ch/) to function.
 
 _Copyright © 2017 Kaivalya Rawal_
 
@@ -56,5 +54,3 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
-
-
