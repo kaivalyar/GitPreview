@@ -23,5 +23,13 @@
     "64" : "icon-64.png",
     "128" : "icon-128.png"
   },
+  "commands": {
+    "toggle": {
+      "suggested_key": {
+        "default": "Alt+G"
+      },
+      "description": "Toggle HTML View"
+    }
+  },
   "manifest_version": 2
 }
