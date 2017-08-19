@@ -19,10 +19,10 @@ As of May 2017, GitHub has near 60,000 HTML repositories. While the default GitH
 
 #### To Run:
 
-1. Navigate to an html page on GitHub, like [this](https://github.com/kaivalyar/TrainingSetGeneratorTool/blob/master/Generator.html) one.
+1. Navigate to an html page on GitHub, like [this](https://github.com/OSDLabs/osdlabs.github.io/blob/master/index.html) one or [this](https://github.com/kaivalyar/TrainingSetGeneratorTool/blob/master/Generator.html) one.
 2. Click the automatically highlighted GitPreview extension icon in the top-right of your browser.
 3. Wait for the page to redirect and HTML to render.
-4. Click on the extension again to return to the default GitHub code view.
+4. Use the back button on your browser or click on the extension again to return to the default GitHub code view.
 
 ## Contact
 
