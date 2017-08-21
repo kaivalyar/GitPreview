@@ -11,6 +11,12 @@ var rule = {
     }),
     new chrome.declarativeContent.PageStateMatcher({
       pageUrl: { hostEquals: 'kaivalyar.github.io', pathPrefix: 'htmlpreview'}
+    }),
+    new chrome.declarativeContent.PageStateMatcher({
+      pageUrl: { hostEquals: 'kaivalyarawal.com', pathPrefix: 'GitPreview'}
+    }),
+    new chrome.declarativeContent.PageStateMatcher({
+      pageUrl: { hostEquals: 'kaivalyarawal.com', pathPrefix: '/GitPreview'}
     })
   ],
   actions: [ new chrome.declarativeContent.ShowPageAction() ]
@@ -46,11 +52,11 @@ chrome.commands.onCommand.addListener(function(command) {
      tabUrl = activeTab.url;
   });
   chrome.tabs.getCurrent(function (tab) {
-    var myNewUrl = "kaivalyar.github.io/htmlpreview"
-    if (tabUrl.indexOf('kaivalyar.github.io/htmlpreview/?') !== -1) { // ie if url contains 'kaivalyar.github.io/htmlpreview/?'
+    var myNewUrl = "kaivalyarawal.com/GitPreview"
+    if (tabUrl.indexOf('kaivalyarawal.com/GitPreview/?') !== -1) { // ie if url contains 'kaivalyar.github.io/htmlpreview/?'
         var myNewUrl = tabUrl.substring(tabUrl.indexOf('?')+1)
     } else {
-        var myNewUrl = "http://kaivalyar.github.io/htmlpreview/?" + tabUrl;
+        var myNewUrl = "http://kaivalyarawal.com/GitPreview/?" + tabUrl;
     }
     chrome.tabs.update({url: myNewUrl});
   });
